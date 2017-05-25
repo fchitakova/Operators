@@ -174,20 +174,7 @@ bool operator <  (const Bicycle& b1, const Bicycle& b2)
 
 bool operator <= (const Bicycle& b1, const Bicycle& b2)
 {
-	int countOfFirst = 0, countOfSecond = 0;
-	bool flag = 0;
-	for (size_t i = 0; i<b1.getNumberOfParts(); ++i)
-	{
-		if (b1.getParts()[i].getQuiality() == 1)
-			++countOfFirst;
-	}
-	for (size_t i = 0; i<b2.getNumberOfParts(); ++i)
-	{
-		if (b2.getParts()[i].getQuiality() == 1)
-			++countOfSecond;
-	}
-	flag = (countOfFirst == countOfSecond);
-	return flag || b1<b2;
+	return b1==b2 || b1<b2;
 }
 
 bool operator >(const Bicycle& b1, const Bicycle& b2)
