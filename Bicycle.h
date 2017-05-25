@@ -16,8 +16,8 @@ public:
 	Bicycle operator+(const BicyclePart&toadd)const;
 	Bicycle&operator-=(const BicyclePart&toremove);
 	Bicycle operator-(const BicyclePart&toremove)const;
-	bool operator==(const Bicycle&other);
-	bool operator!=(const Bicycle&other);
+	bool operator==(const Bicycle&other)const;
+	bool operator!=(const Bicycle&other)const;
 	size_t getNumberOfParts()const { return numberOFparts; }
 	double getPrice()const { return price; }
 	BicyclePart*getParts()const { return parts; }
