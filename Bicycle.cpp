@@ -112,7 +112,7 @@ Bicycle Bicycle::operator-(const BicyclePart&toremove)const
 }
 bool Bicycle::operator==(const Bicycle&other)const
 {
-	if (strcmp(brand, other.brand) == NULL && price == other.price)
+	if (strcmp(brand, other.brand) == 0 && price == other.price)
 		return true;
 	return false;
 }
